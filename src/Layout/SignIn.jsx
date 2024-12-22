@@ -26,13 +26,22 @@ const SignIn = () => {
         })
     }
 
+
+    const handleGoogle = () => {
+        handleGoogleSignIn()
+        .then(res=>{
+          navigate( location?.state ? location.state : "/")
+          toast.success("Successfully Login")
+        })
+    }
+
   return (
     <div className="min-h-screen flex items-center justify-center ">
         <div className="w-full max-w-md  rounded-lg shadow-md p-6">
             <h2 className="text-2xl font-bold text-center mb-4">Log in to your Account</h2>
             <p className="text-sm  text-center mb-6">Welcome back! Select method to log in:</p>
             <div className="flex justify-center gap-4 mb-4">
-                <button className="btn btn-outline flex items-center gap-2 font-bold py-3 px-10 rounded shadow "><FcGoogle size={20} />Sign in With Google
+                <button onClick={handleGoogle} className="btn btn-outline flex items-center gap-2 font-bold py-3 px-10 rounded shadow "><FcGoogle size={20} />Sign in With Google
                 </button>
             </div>
             <div className="divider">or continue with email</div>

@@ -4,7 +4,7 @@ import useAuth from "../Hooks/useAuth";
 
 
 const Register = () => {
-    const { handleRegister, manageProfile , handleGoogleSignIn } = useAuth()
+    const { handleRegister, manageProfile , handleGoogleSignIn, setUser } = useAuth()
     const navigate = useNavigate()
     const handleRegisterSubmit = (e) =>{
         e.preventDefault()
@@ -21,7 +21,7 @@ const Register = () => {
             manageProfile( name, photo )
             .then(() =>{
                 setUser({...res.user, displayName: name, photoURL : photo})
-                navigate("/")
+                navigate('/')
             })
             // toast.success("Successfully register")
         })
@@ -34,7 +34,7 @@ const Register = () => {
     const handleGoogle = () => {
         handleGoogleSignIn()
         .then(res=>{
-            navigate("/")
+            navigate('/')
             // toast.success("Successfully Login")
         })
     }

@@ -1,15 +1,29 @@
 import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
 
 const SignIn = () => {
-    const {} = useAuth()
+    const { handleSignIn, handleGoogleSignIn } = useAuth()
+    const location = useLocation()
+    // console.log(location.state);
+    const navigate = useNavigate()
+
+
     const handleSigninSubmit = (e) =>{
         e.preventDefault()
         const form = e.target
         const email = form.email.value
         const password = form.password.value
-        console.log({email, password})
+        // console.log({email, password})
+
+        handleSignIn( email, password )
+        .then(res => {
+            navigate( location?.state ? location.state : "/")
+            // toast.success("Successfully Login")
+        })
+        .catch(() =>{
+            // toast.error("Email Or Password incorrect")
+        })
     }
 
   return (

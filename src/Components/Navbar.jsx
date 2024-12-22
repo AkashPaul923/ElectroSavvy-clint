@@ -1,20 +1,25 @@
 import { Link, NavLink } from "react-router-dom";
+import useAuth from "../Hooks/useAuth";
 
 const Navbar = () => {
+    const { user, loader , handleSignOut } = useAuth()
     const links = <>
         <li><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/all-service'>All Service</NavLink></li>
-        <li>
-            <details>
-                <summary>Dashboard</summary>
-                <ul className="p-2 min-w-44">
-                    <li><NavLink to='/add-service'>Add Service</NavLink></li>
-                    <li><NavLink to='/manage-services'>Manage Services</NavLink></li>
-                    <li><NavLink to='/booked-services'>Booked Services</NavLink></li>
-                    {/* <li><NavLink to='/manage-services'>Submenu 2</NavLink></li> */}
-                </ul>
-            </details>
-        </li>
+        {
+            user && 
+            <li>
+                <details>
+                    <summary>Dashboard</summary>
+                    <ul className="p-2 min-w-44">
+                        <li><NavLink to='/add-service'>Add Service</NavLink></li>
+                        <li><NavLink to='/manage-services'>Manage Services</NavLink></li>
+                        <li><NavLink to='/booked-services'>Booked Services</NavLink></li>
+                        {/* <li><NavLink to='/manage-services'>Submenu 2</NavLink></li> */}
+                    </ul>
+                </details>
+            </li>
+        }
     </>
   return (
     <div className="navbar bg-base-100">
@@ -37,7 +42,17 @@ const Navbar = () => {
             </ul>
         </div>
         <div className="navbar-end">
-            <Link to='/signin' className="btn">Signin</Link>
+            {
+                loader ? "":
+                    user ? 
+                    <>
+                        <p>{user?.displayName}</p>
+                        <img className="h-10 w-10 rounded-full object-cover mr-2" src={user?.photoURL} alt="" />
+                        <button onClick={handleSignOut} className="btn btn-outline">Sign out</button>
+                    </> 
+                    :
+                    <Link to='/signin' className="btn">Signin</Link>
+            }
         </div>
     </div>
   );

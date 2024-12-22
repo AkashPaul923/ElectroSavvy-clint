@@ -15,7 +15,7 @@ const Navbar = () => {
                         <li><NavLink to='/add-service'>Add Service</NavLink></li>
                         <li><NavLink to='/manage-services'>Manage Services</NavLink></li>
                         <li><NavLink to='/booked-services'>Booked Services</NavLink></li>
-                        {/* <li><NavLink to='/manage-services'>Submenu 2</NavLink></li> */}
+                        <li><NavLink to='/service-to-do'>Service To Do</NavLink></li>
                     </ul>
                 </details>
             </li>

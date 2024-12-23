@@ -1,0 +1,123 @@
+[
+    {
+      "serviceImage": "https://qfix.com.bd/wp-content/uploads/2022/03/img-1570_orig-1-600x450.jpg",
+      "serviceName": "LED TV Repair",
+      "servicePrice": 1500,
+      "ServiceArea": ["Dhaka", "Chittagong", "Sylhet"],
+      "serviceProviderImage": "https://img.freepik.com/free-photo/male-electrician-works-switchboard-with-electrical-connecting-cable_169016-18026.jpg?t=st=1734945244~exp=1734948844~hmac=881a94bdae04d885b3e38b1bac747a3717da7fbdc56ce6daf6753b4a16aec7f6&w=1380",
+      "serviceProviderName": "TechFix Solutions",
+      "serviceProviderEmail": "contact@techfix.com",
+      "status": "Pending"
+    },
+    {
+      "serviceImage": "https://wilshirerefrigeration.com/wp-content/uploads/2021/07/Refrigerator-Repair.jpeg",
+      "serviceName": "Refrigerator Maintenance",
+      "servicePrice": 2000,
+      "ServiceArea": ["Rajshahi", "Khulna", "Barishal"],
+      "serviceProviderImage": "https://img.freepik.com/free-photo/male-electrician-works-switchboard-with-electrical-connecting-cable_169016-18026.jpg?t=st=1734945244~exp=1734948844~hmac=881a94bdae04d885b3e38b1bac747a3717da7fbdc56ce6daf6753b4a16aec7f6&w=1380",
+      "serviceProviderName": "CoolCare Services",
+      "serviceProviderEmail": "info@coolcare.com",
+      "status": "Pending"
+    },
+    {
+      "serviceImage": "https://clareservices.com/wp-content/uploads/2021/05/technician-service-removing-air-filter-air-conditioner-cleaning_35076-3617-640x426.jpg",
+      "serviceName": "Air Conditioner Repair",
+      "servicePrice": 3000,
+      "ServiceArea": ["Dhaka", "Comilla", "Sylhet"],
+      "serviceProviderImage": "https://img.freepik.com/free-photo/male-electrician-works-switchboard-with-electrical-connecting-cable_169016-18026.jpg?t=st=1734945244~exp=1734948844~hmac=881a94bdae04d885b3e38b1bac747a3717da7fbdc56ce6daf6753b4a16aec7f6&w=1380",
+      "serviceProviderName": "AirCare Experts",
+      "serviceProviderEmail": "support@aircare.com",
+      "status": "Pending"
+    },
+    {
+      "serviceImage": "https://media.istockphoto.com/id/1314435125/photo/appliance-technician-working-on-a-front-load-washing-machine-in-a-laundry-room.jpg?s=612x612&w=0&k=20&c=s8Ifj98Xhm-y-Xj63VTWeRUGgiNG_uf6OFxfiT4rH0s=",
+      "serviceName": "Washing Machine Repair",
+      "servicePrice": 1200,
+      "ServiceArea": ["Dhaka", "Rangpur", "Mymensingh"],
+      "serviceProviderImage": "https://img.freepik.com/free-photo/male-electrician-works-switchboard-with-electrical-connecting-cable_169016-18026.jpg?t=st=1734945244~exp=1734948844~hmac=881a94bdae04d885b3e38b1bac747a3717da7fbdc56ce6daf6753b4a16aec7f6&w=1380",
+      "serviceProviderName": "WashFix Co.",
+      "serviceProviderEmail": "services@washfix.com",
+      "status": "Pending"
+    },
+    {
+      "serviceImage": "https://s3.ap-south-1.amazonaws.com/cdn-shebaxyz/images/services_images/thumbs/1732186188_ovenrepair/servicing.jpg",
+      "serviceName": "Microwave Oven Repair",
+      "servicePrice": 800,
+      "ServiceArea": ["Sylhet", "Chittagong", "Dhaka"],
+      "serviceProviderImage": "https://img.freepik.com/free-photo/male-electrician-works-switchboard-with-electrical-connecting-cable_169016-18026.jpg?t=st=1734945244~exp=1734948844~hmac=881a94bdae04d885b3e38b1bac747a3717da7fbdc56ce6daf6753b4a16aec7f6&w=1380",
+      "serviceProviderName": "HeatWave Repair",
+      "serviceProviderEmail": "heatwave@repair.com",
+      "status": "Pending"
+    },
+    {
+      "serviceImage": "https://media.istockphoto.com/id/184415451/photo/plugging-pc-cables-and-wires.jpg?s=612x612&w=0&k=20&c=FX4wb1ovJkIzkk8gB0ZXollj_-R6jPOcjCiNOUKlLAA=",
+      "serviceName": "Desktop PC Repair",
+      "servicePrice": 1000,
+      "ServiceArea": ["Dhaka", "Rajshahi", "Khulna"],
+      "serviceProviderImage": "https://img.freepik.com/free-photo/male-electrician-works-switchboard-with-electrical-connecting-cable_169016-18026.jpg?t=st=1734945244~exp=1734948844~hmac=881a94bdae04d885b3e38b1bac747a3717da7fbdc56ce6daf6753b4a16aec7f6&w=1380",
+      "serviceProviderName": "PC Masters",
+      "serviceProviderEmail": "contact@pcmasters.com",
+      "status": "Pending"
+    },
+    {
+      "serviceImage": "https://media.istockphoto.com/id/928791078/photo/computer-repair-service-technician-repairing-broken-laptop-in-office.jpg?s=2048x2048&w=is&k=20&c=_JdjHCJ32mVPkXH0BAa40WdIv-rE2sJ1wXfieEUkyKE=",
+      "serviceName": "Laptop Repair",
+      "servicePrice": 1500,
+      "ServiceArea": ["Dhaka", "Comilla", "Sylhet"],
+      "serviceProviderImage": "https://img.freepik.com/free-photo/male-electrician-works-switchboard-with-electrical-connecting-cable_169016-18026.jpg?t=st=1734945244~exp=1734948844~hmac=881a94bdae04d885b3e38b1bac747a3717da7fbdc56ce6daf6753b4a16aec7f6&w=1380",
+      "serviceProviderName": "LaptopHub",
+      "serviceProviderEmail": "info@laptophub.com",
+      "status": "Pending"
+    },
+    {
+      "serviceImage": "https://media.istockphoto.com/id/618519466/photo/technician-fixing-camera-on-wall.jpg?s=2048x2048&w=is&k=20&c=lDq2a4lMWeJdtOl9rmMThPFWlZ1vgaBQjkoHUucp2sk=",
+      "serviceName": "CCTV Installation",
+      "servicePrice": 4000,
+      "ServiceArea": ["Dhaka", "Chittagong", "Khulna"],
+      "serviceProviderImage": "https://img.freepik.com/free-photo/male-electrician-works-switchboard-with-electrical-connecting-cable_169016-18026.jpg?t=st=1734945244~exp=1734948844~hmac=881a94bdae04d885b3e38b1bac747a3717da7fbdc56ce6daf6753b4a16aec7f6&w=1380",
+      "serviceProviderName": "SecureTech",
+      "serviceProviderEmail": "secure@tech.com",
+      "status": "Pending"
+    },
+    {
+      "serviceImage": "https://pcservices.ca/sites/default/files/styles/large/public/router.jpeg?itok=bPua658M",
+      "serviceName": "Router Setup & Repair",
+      "servicePrice": 600,
+      "ServiceArea": ["Rangpur", "Barishal", "Dhaka"],
+      "serviceProviderImage": "https://img.freepik.com/free-photo/male-electrician-works-switchboard-with-electrical-connecting-cable_169016-18026.jpg?t=st=1734945244~exp=1734948844~hmac=881a94bdae04d885b3e38b1bac747a3717da7fbdc56ce6daf6753b4a16aec7f6&w=1380",
+      "serviceProviderName": "NetFix Services",
+      "serviceProviderEmail": "netfix@services.com",
+      "status": "Pending"
+    },
+    {
+      "serviceImage": "https://media.istockphoto.com/id/1160996781/photo/business-man-or-technician-is-checking-and-changing-the-printer-equipment-cartridges-tone-of.jpg?s=2048x2048&w=is&k=20&c=QiQ9Ww6fpIopx8xdeUbx3LmI8SA-OyQp4XgM1wAuQPI=",
+      "serviceName": "Printer Repair",
+      "servicePrice": 900,
+      "ServiceArea": ["Dhaka", "Sylhet", "Rajshahi"],
+      "serviceProviderImage": "https://img.freepik.com/free-photo/male-electrician-works-switchboard-with-electrical-connecting-cable_169016-18026.jpg?t=st=1734945244~exp=1734948844~hmac=881a94bdae04d885b3e38b1bac747a3717da7fbdc56ce6daf6753b4a16aec7f6&w=1380",
+      "serviceProviderName": "PrintCare Co.",
+      "serviceProviderEmail": "printcare@repair.com",
+      "status": "Pending"
+    },
+    {
+      "serviceImage": "https://media.istockphoto.com/id/177100713/photo/home-cinema-room-with-two-lounge-chairs.jpg?s=2048x2048&w=is&k=20&c=ZimtnaV_D7uqaYs4Len22KVrv9O2GzaCdHpFaI-sXck=",
+      "serviceName": "Home Theater Setup",
+      "servicePrice": 2500,
+      "ServiceArea": ["Chittagong", "Dhaka", "Khulna"],
+      "serviceProviderImage": "https://img.freepik.com/free-photo/male-electrician-works-switchboard-with-electrical-connecting-cable_169016-18026.jpg?t=st=1734945244~exp=1734948844~hmac=881a94bdae04d885b3e38b1bac747a3717da7fbdc56ce6daf6753b4a16aec7f6&w=1380",
+      "serviceProviderName": "SoundWave Installers",
+      "serviceProviderEmail": "soundwave@setup.com",
+      "status": "Pending"
+    },
+    {
+      "serviceImage": "https://media.istockphoto.com/id/472354892/photo/technician-repairing-a-smarphone.jpg?s=2048x2048&w=is&k=20&c=E8t9goNf7fW_Q5-QyW4VsgkUJu5QOcLzqxRlKKSe0vQ=",
+      "serviceName": "Smartphone Repair",
+      "servicePrice": 500,
+      "ServiceArea": ["Sylhet", "Dhaka", "Rangpur"],
+      "serviceProviderImage": "https://img.freepik.com/free-photo/male-electrician-works-switchboard-with-electrical-connecting-cable_169016-18026.jpg?t=st=1734945244~exp=1734948844~hmac=881a94bdae04d885b3e38b1bac747a3717da7fbdc56ce6daf6753b4a16aec7f6&w=1380",
+      "serviceProviderName": "MobileFix Experts",
+      "serviceProviderEmail": "mobilefix@experts.com",
+      "status": "Pending"
+    }
+]
+  

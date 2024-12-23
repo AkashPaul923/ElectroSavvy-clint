@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import ServiceCard from "../Components/ServiceCard";
 
 
 const AllService = () => {
@@ -32,7 +33,7 @@ const AllService = () => {
                     <path fillRule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clipRule="evenodd" />
                 </svg>
             </label>
-            <p>All Services {services.length}</p>
+            <p className="text-center text-4xl font-bold my-7">All Services</p>
             {
                 loading && <div className="flex justify-center my-[300px]"><span className="loading loading-bars loading-lg"></span></div>
             }
@@ -40,8 +41,10 @@ const AllService = () => {
                 !loading & services.length === 0 ?
                 <div className="flex justify-center my-[300px] text-3xl font-bold">NO DATA FOUND</div>
                 :
-                <div>
-
+                <div className="max-w-5xl mx-auto grid grid-cols-1 gap-7 px-6 lg:p-0">
+                    {
+                        services.map(service => <ServiceCard service={service}></ServiceCard>)
+                    }
                 </div>
             }
         </div>

@@ -7,7 +7,7 @@ const AllService = () => {
     const [loading, setLoading] = useState(true)
     const [services, setServices] = useState([])
     const [search, setSearch] = useState('')
-    console.log(services)
+    // console.log(services)
 
     useEffect(()=>{
         setServices([])
@@ -43,7 +43,7 @@ const AllService = () => {
                 :
                 <div className="max-w-5xl mx-auto grid grid-cols-1 gap-7 px-6 lg:p-0">
                     {
-                        services.map(service => <ServiceCard service={service}></ServiceCard>)
+                        services.map(service => <ServiceCard key={service._id} service={service}></ServiceCard>)
                     }
                 </div>
             }

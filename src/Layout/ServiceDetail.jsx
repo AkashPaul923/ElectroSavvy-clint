@@ -23,7 +23,7 @@ const ServiceDetail = () => {
 
         axios.post('http://localhost:5000/booked-services', bookedData)
         .then(res =>{
-            console.log(res.data)
+            // console.log(res.data)
             if(res.data.insertedId){
                 document.getElementById(`modal-close-${_id}`).click()
                 Swal.fire({

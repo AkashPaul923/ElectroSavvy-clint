@@ -11,7 +11,7 @@ const Navbar = () => {
             <li>
                 <details>
                     <summary>Dashboard</summary>
-                    <ul className="p-2 min-w-44">
+                    <ul className="p-2 min-w-44 z-10">
                         <li><NavLink to='/add-service'>Add Service</NavLink></li>
                         <li><NavLink to='/manage-services'>Manage Services</NavLink></li>
                         <li><NavLink to='/booked-services'>Booked Services</NavLink></li>
@@ -30,7 +30,7 @@ const Navbar = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
                     </svg>
                 </div>
-                <ul tabIndex={0} className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                <ul tabIndex={0} className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[5] mt-3 w-52 p-2 shadow">
                     {links}
                 </ul>
             </div>

@@ -1,6 +1,8 @@
 import { FaEnvelope } from "react-icons/fa";
 import { useLoaderData } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
+import axios from "axios";
+import Swal from "sweetalert2";
 
 
 const ServiceDetail = () => {
@@ -16,8 +18,24 @@ const ServiceDetail = () => {
         // console.log(initialData);
         const {servicePrice, ...bookedData} = initialData
         bookedData.servicePrice = parseInt(servicePrice)
+        bookedData.status = 'Pending'
         console.log(bookedData)
-        document.getElementById(`modal-close-${_id}`).click()
+
+        axios.post('http://localhost:5000/booked-services', bookedData)
+        .then(res =>{
+            console.log(res.data)
+            if(res.data.insertedId){
+                document.getElementById(`modal-close-${_id}`).click()
+                Swal.fire({
+                    title: `SuccessFully Booked ${serviceName}!`,
+                    icon: "success"
+                });
+                e.target.reset()
+                
+            } 
+        })
+
+        
     }
 
     return (

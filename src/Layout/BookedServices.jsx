@@ -13,7 +13,7 @@ const BookedServices = () => {
         setLoading(true)
         axios.get(`http://localhost:5000/booked-services?email=${user.email}`)
         .then(res =>{
-            console.log(res.data)
+            // console.log(res.data)
             setBookedServices(res.data)
             setLoading(false)
         })

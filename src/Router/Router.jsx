@@ -11,6 +11,7 @@ import ManageServices from "../Layout/ManageServices";
 import BookedServices from "../Layout/BookedServices";
 import PrivateRoute from "../Auth/PrivateRoute";
 import ServiceToDo from "../Layout/ServiceToDo";
+import UpdateService from "../Layout/UpdateService";
 
 const router = createBrowserRouter([
     {
@@ -38,6 +39,11 @@ const router = createBrowserRouter([
         {
             path: '/manage-services',
             element: <PrivateRoute><ManageServices></ManageServices></PrivateRoute>,
+        },
+        {
+            path: '/update-service/:id',
+            element: <PrivateRoute><UpdateService></UpdateService></PrivateRoute>,
+            loader: ({params}) => fetch(`http://localhost:5000/service-detail/${params.id}`)
         },
         {
             path: '/booked-services',

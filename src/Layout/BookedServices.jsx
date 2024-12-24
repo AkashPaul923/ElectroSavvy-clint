@@ -8,7 +8,6 @@ const BookedServices = () => {
     const {user} = useAuth()
     const [loading, setLoading] = useState(true)
     const [bookedServices , setBookedServices] = useState([])
-    const { serviceImage, serviceName, servicePrice, serviceProviderName, status} = bookedServices
 
     useEffect(()=>{
         setLoading(true)
@@ -51,11 +50,11 @@ const BookedServices = () => {
                                 <td className="py-2 px-4 ">{bookedService.serviceProviderName}</td>
                                 <td
                                     className={`py-2 px-4 font-semibold ${
-                                    status === "Pending"
-                                    ? "text-yellow-500"
-                                    : status === "Completed"
+                                    bookedService.status === "Pending"
+                                    ? "text-red-500"
+                                    : bookedService.status === "Completed"
                                     ? "text-green-500"
-                                    : "text-red-500"
+                                    : "text-yellow-500"
                                     }`}
                                 >
                                 {bookedService.status}

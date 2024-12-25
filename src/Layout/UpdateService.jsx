@@ -1,19 +1,34 @@
-import axios from "axios";
-import { useLoaderData, useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
+import useAxiosSecure from "../Hooks/useAxiosSecure";
+import { useEffect, useState } from "react";
 
 
 const UpdateService = () => {
-    const service = useLoaderData()
+    const [service , setService] = useState('')
+    const [loading, setLoading] = useState(true)
+    const {id} = useParams()
     const navigate = useNavigate()
+    const axiosSecure = useAxiosSecure()
     const {_id, serviceName, serviceImage, servicePrice, ServiceArea , description} = service
+
+
+    useEffect(()=>{
+        setLoading(true)
+        axiosSecure.get(`/service-detail/${id}`)
+        .then(res =>{
+            // console.log(res.data)
+            setService(res.data)
+            setLoading(false)
+        })
+    },[])
 
     const handleUpdateSubmit = (e) => {
         e.preventDefault()
         const formData = new FormData(e.target)
         const updateServiceData = Object.fromEntries(formData.entries())
         // console.log(updateServiceData)
-        axios.patch(`http://localhost:5000/update-service/${_id}`, updateServiceData)
+        axiosSecure.patch(`/update-service/${_id}`, updateServiceData)
         .then(res => {
             // console.log(res.data)
             if(res.data.modifiedCount > 0 ){
@@ -25,6 +40,14 @@ const UpdateService = () => {
             }
         })
     }
+
+
+    if(loading){
+        return <div className="flex justify-center my-[300px]"><span className="loading loading-bars loading-lg"></span></div>
+    }
+
+
+
     return (
     <div>
         <div className="w-full max-w-md mx-auto my-20  rounded-lg shadow-md p-6">

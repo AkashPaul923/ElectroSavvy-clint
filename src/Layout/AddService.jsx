@@ -1,10 +1,13 @@
-import axios from "axios";
 import useAuth from "../Hooks/useAuth";
 import Swal from "sweetalert2";
+import useAxiosSecure from "../Hooks/useAxiosSecure";
+
 
 
 const AddService = () => {
     const {user} = useAuth()
+    const axiosSecure = useAxiosSecure()
+
     const handleAddSubmit = (e) =>{
         e.preventDefault()
         const formData = new FormData(e.target)
@@ -13,7 +16,7 @@ const AddService = () => {
         addServiceData.serviceProviderName = user.displayName
         addServiceData.serviceProviderEmail = user.email
         console.log(addServiceData)
-        axios.post('http://localhost:5000/services', addServiceData)
+        axiosSecure.post('/services', addServiceData)
         .then(res =>{
             if(res.data.insertedId){
                 Swal.fire({

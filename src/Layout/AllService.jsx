@@ -1,6 +1,6 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
 import ServiceCard from "../Components/ServiceCard";
+import axios from "axios";
 
 
 const AllService = () => {

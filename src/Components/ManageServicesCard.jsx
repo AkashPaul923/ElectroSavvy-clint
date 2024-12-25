@@ -1,15 +1,16 @@
 import axios from 'axios';
-import React from 'react';
+import { FaEdit } from 'react-icons/fa';
 import { RiDeleteBinLine } from 'react-icons/ri';
-import { RxUpdate } from 'react-icons/rx';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import useAxiosSecure from '../Hooks/useAxiosSecure';
 
 const ManageServicesCard = ({service , services, setServices }) => {
     const {_id,serviceName, serviceImage, servicePrice, ServiceArea , description} = service
+    const axiosSecure = useAxiosSecure()
 
     const handleDeleteService = () =>{
-        console.log('delete btn clicked')
+        // console.log('delete btn clicked')
         Swal.fire({
             title: "Are you sure?",
             text: "You won't be able to revert this!",
@@ -20,12 +21,12 @@ const ManageServicesCard = ({service , services, setServices }) => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if(result.isConfirmed) {
-                axios.delete(`http://localhost:5000/services/${_id}`)
+                axiosSecure.delete(`/services/${_id}`)
                 .then(res => {
                     if(res.data.deletedCount > 0){
                         Swal.fire({
                             title: "Deleted!",
-                            text: "Your file has been deleted.",
+                            text: "Your service has been deleted.",
                             icon: "success"
                         })
                         const newServices = services.filter(service => service._id !== _id)
@@ -47,7 +48,7 @@ const ManageServicesCard = ({service , services, setServices }) => {
                 <p>Service Area: {ServiceArea}</p>
                 <div class="card-actions justify-between">
                     <button onClick={handleDeleteService} class="btn btn-sm btn-error"><RiDeleteBinLine /></button>
-                    <Link to={`/update-service/${_id}`} class="btn btn-sm btn-warning"><RxUpdate /></Link>
+                    <Link to={`/update-service/${_id}`} class="btn btn-sm btn-warning"><FaEdit /></Link>
                 </div>
             </div>
         </div>

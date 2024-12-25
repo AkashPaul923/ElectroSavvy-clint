@@ -2,22 +2,56 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import useAuth from "../Hooks/useAuth";
 import { FaTrash } from "react-icons/fa";
+import Swal from "sweetalert2";
+import useAxiosSecure from "../Hooks/useAxiosSecure";
 
 
 const BookedServices = () => {
     const {user} = useAuth()
     const [loading, setLoading] = useState(true)
     const [bookedServices , setBookedServices] = useState([])
+    const axiosSecure = useAxiosSecure()
 
     useEffect(()=>{
         setLoading(true)
-        axios.get(`http://localhost:5000/booked-services?email=${user.email}`)
+        axiosSecure.get(`/booked-services?email=${user.email}`)
         .then(res =>{
             // console.log(res.data)
             setBookedServices(res.data)
             setLoading(false)
         })
+        .catch(()=>{
+            setBookedServices([])
+            setLoading(false)
+        })
     },[])
+
+    const handleBookedDelete = (id) => {
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if(result.isConfirmed) {
+                axiosSecure.delete(`/booked-services/${id}`)
+                .then(res => {
+                    if(res.data.deletedCount > 0){
+                        Swal.fire({
+                            title: "Deleted!",
+                            text: "Your booked service has been deleted.",
+                            icon: "success"
+                        })
+                        const newBookedServices = bookedServices.filter(bookedService => bookedService._id !== id)
+                        setBookedServices(newBookedServices)
+                    }
+                })
+            }
+        });
+    }
     
     
     if(loading){
@@ -39,6 +73,7 @@ const BookedServices = () => {
                             <th className="py-2 px-4">Service Name</th>
                             <th className="py-2 px-4">Price</th>
                             <th className="py-2 px-4">Provider</th>
+                            <th className="py-2 px-4">Service Taking Date</th>
                             <th className="py-2 px-4">Status</th>
                             <th className="py-2 px-4">Action</th>
                         </tr>
@@ -48,6 +83,7 @@ const BookedServices = () => {
                                 <td className="py-2 px-4">{bookedService.serviceName}</td>
                                 <td className="py-2 px-4 ">{bookedService.servicePrice} BDT</td>
                                 <td className="py-2 px-4 ">{bookedService.serviceProviderName}</td>
+                                <td className="py-2 px-4 ">{bookedService.serviceTakingDate}</td>
                                 <td
                                     className={`py-2 px-4 font-semibold ${
                                     bookedService.status === "Pending"
@@ -60,9 +96,7 @@ const BookedServices = () => {
                                 {bookedService.status}
                                 </td>
                                 <td className="py-2 px-4 text-center">
-                                    <button  className="btn btn-error btn-sm flex items-center space-x-1">
-                                    <FaTrash />
-                                    </button>
+                                    <button onClick={()=> handleBookedDelete(bookedService._id)} className="btn btn-error btn-sm flex items-center space-x-1"><FaTrash /></button>
                                 </td>
                             </tr>
                         ))}

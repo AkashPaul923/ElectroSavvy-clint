@@ -1,15 +1,30 @@
 import { FaEnvelope } from "react-icons/fa";
-import { useLoaderData } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
-import axios from "axios";
 import Swal from "sweetalert2";
+import useAxiosSecure from "../Hooks/useAxiosSecure";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 
 const ServiceDetail = () => {
-    const service = useLoaderData()
+    const [service , setService] = useState('')
+    const [loading, setLoading] = useState(true)
+    const axiosSecure = useAxiosSecure()
     const {user} = useAuth()
-    console.log(service);
+    const {id} = useParams()
+    // console.log(service);
     const {_id,serviceImage, serviceName, servicePrice , serviceProviderImage , serviceProviderName, ServiceArea , description , serviceProviderEmail} = service
+
+
+    useEffect(()=>{
+        setLoading(true)
+        axiosSecure.get(`/service-detail/${id}`)
+        .then(res =>{
+            // console.log(res.data)
+            setService(res.data)
+            setLoading(false)
+        })
+    },[])
 
     const handleModalSubmit = (e) => {
         e.preventDefault()
@@ -19,9 +34,9 @@ const ServiceDetail = () => {
         const {servicePrice, ...bookedData} = initialData
         bookedData.servicePrice = parseInt(servicePrice)
         bookedData.status = 'Pending'
-        console.log(bookedData)
+        // console.log(bookedData)
 
-        axios.post('http://localhost:5000/booked-services', bookedData)
+        axiosSecure.post('/booked-services', bookedData)
         .then(res =>{
             // console.log(res.data)
             if(res.data.insertedId){
@@ -31,11 +46,14 @@ const ServiceDetail = () => {
                     icon: "success"
                 });
                 e.target.reset()
-                
             } 
         })
 
         
+    }
+
+    if(loading){
+        return <div className="flex justify-center my-[300px]"><span className="loading loading-bars loading-lg"></span></div>
     }
 
     return (

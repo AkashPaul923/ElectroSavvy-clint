@@ -2,19 +2,25 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import useAuth from "../Hooks/useAuth";
 import ManageServicesCard from "../Components/manageServicesCard";
+import useAxiosSecure from "../Hooks/useAxiosSecure";
 
 
 const ManageServices = () => {
-    const {user} = useAuth()
+    const { user } = useAuth()
     const [loading, setLoading] = useState(true)
     const [services , setServices] = useState([])
+    const axiosSecure = useAxiosSecure()
     
     useEffect(()=>{
         setLoading(true)
-        axios.get(`http://localhost:5000/manage-services?email=${user.email}`)
+        axiosSecure.get(`/manage-services?email=${user.email}`)
         .then(res =>{
             // console.log(res.data)
             setServices(res.data)
+            setLoading(false)
+        })
+        .catch(()=>{
+            setServices([])
             setLoading(false)
         })
     },[])

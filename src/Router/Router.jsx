@@ -30,7 +30,6 @@ const router = createBrowserRouter([
         {
             path: '/services/:id',
             element: <PrivateRoute><ServiceDetail></ServiceDetail></PrivateRoute>,
-            loader: ({params}) => fetch(`http://localhost:5000/service-detail/${params.id}`)
         },
         {
             path: '/add-service',
@@ -43,7 +42,6 @@ const router = createBrowserRouter([
         {
             path: '/update-service/:id',
             element: <PrivateRoute><UpdateService></UpdateService></PrivateRoute>,
-            loader: ({params}) => fetch(`http://localhost:5000/service-detail/${params.id}`)
         },
         {
             path: '/booked-services',

@@ -4,6 +4,7 @@ import Swal from "sweetalert2";
 import useAxiosSecure from "../Hooks/useAxiosSecure";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 
 const ServiceDetail = () => {
@@ -58,6 +59,9 @@ const ServiceDetail = () => {
 
     return (
         <div className="max-w-5xl mx-auto p-4 my-10">
+            <Helmet>
+                <title>Service Detail || ElectroSavvy</title>
+            </Helmet>
             {/* Service Provider Information */}
             <div className="p-3 md:p-10 flex gap-2 md:gap-7 items-center bg-base-300 rounded-xl mb-8">
                 <figure>

@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import useAuth from "../Hooks/useAuth";
 import ManageServicesCard from "../Components/manageServicesCard";
 import useAxiosSecure from "../Hooks/useAxiosSecure";
+import { Helmet } from "react-helmet";
 
 
 const ManageServices = () => {
@@ -29,6 +30,9 @@ const ManageServices = () => {
 
     return (
         <div className="p-6  min-h-[600px]">
+            <Helmet>
+                <title>Manage Service || ElectroSavvy</title>
+            </Helmet>
             <div className="max-w-7xl mx-auto">
                 <h1 className="text-3xl font-bold text-center mb-6">Manage Services</h1>
                 {

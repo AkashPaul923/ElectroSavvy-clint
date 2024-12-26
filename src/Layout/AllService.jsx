@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import ServiceCard from "../Components/ServiceCard";
 import axios from "axios";
+import { Helmet } from "react-helmet";
 
 
 const AllService = () => {
@@ -27,6 +28,9 @@ const AllService = () => {
 
     return (
         <div className="min-h-[700px]">
+            <Helmet>
+                <title>All Service || ElectroSavvy</title>
+            </Helmet>
             <label className="input input-bordered flex items-center gap-2 mt-4 max-w-xs md:max-w-lg mx-auto">
                 <input onChange={handleSearch} type="text" className="grow" placeholder="Search" />
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="h-4 w-4 opacity-70">

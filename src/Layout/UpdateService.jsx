@@ -2,6 +2,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../Hooks/useAxiosSecure";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 
 
 const UpdateService = () => {
@@ -50,6 +51,9 @@ const UpdateService = () => {
 
     return (
     <div>
+        <Helmet>
+            <title>Update Service || ElectroSavvy</title>
+        </Helmet>
         <div className="w-full max-w-md mx-auto my-20  rounded-lg shadow-md p-6">
             <h2 className="text-2xl font-bold text-center mb-4">Update service</h2>
             <form onSubmit={handleUpdateSubmit}>

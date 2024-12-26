@@ -1,6 +1,7 @@
 import useAuth from "../Hooks/useAuth";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../Hooks/useAxiosSecure";
+import { Helmet } from "react-helmet";
 
 
 
@@ -29,6 +30,9 @@ const AddService = () => {
     }
     return (
     <div className=" ">
+        <Helmet>
+            <title>Add Service || ElectroSavvy</title>
+        </Helmet>
         <div className="w-full max-w-md mx-auto my-20  rounded-lg shadow-md p-6">
             <h2 className="text-2xl font-bold text-center mb-4">Add a service</h2>
             <form onSubmit={handleAddSubmit}>

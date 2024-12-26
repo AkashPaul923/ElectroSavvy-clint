@@ -1,6 +1,7 @@
 import { FcGoogle } from "react-icons/fc";
 import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
+import { Helmet } from "react-helmet";
 
 
 const Register = () => {
@@ -41,6 +42,9 @@ const Register = () => {
 
     return (
         <div className="min-h-screen flex items-center justify-center ">
+        <Helmet>
+            <title>Register || ElectroSavvy</title>
+        </Helmet>
         <div className="w-full max-w-md  rounded-lg shadow-md p-6">
             <h2 className="text-2xl font-bold text-center mb-4">Register an Account</h2>
             <div className="flex justify-center gap-4 mb-4">

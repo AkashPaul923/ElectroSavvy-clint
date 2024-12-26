@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import useAuth from "../Hooks/useAuth";
 import TodoServicesCard from "../Components/TodoServicesCard";
 import useAxiosSecure from "../Hooks/useAxiosSecure";
+import { Helmet } from "react-helmet";
 
 
 const ServiceToDo = () => {
@@ -30,6 +31,9 @@ const ServiceToDo = () => {
     
     return (
         <div className="p-6  min-h-[600px]">
+            <Helmet>
+                <title>Service To Do || ElectroSavvy</title>
+            </Helmet>
             <div className="max-w-7xl mx-auto">
                 <h1 className="text-3xl font-bold text-center mb-6">Services To Do</h1>
                 {

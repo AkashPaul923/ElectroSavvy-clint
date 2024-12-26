@@ -1,9 +1,13 @@
-import React from 'react';
+
+import { Helmet } from 'react-helmet';
 import Banner from '../Components/Banner';
 
 const Home = () => {
-    return (
+    return (        
         <div>
+            <Helmet>
+                <title>Home || ElectroSavvy</title>
+            </Helmet>
             <Banner></Banner>
         </div>
     );

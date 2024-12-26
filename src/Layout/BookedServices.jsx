@@ -3,6 +3,7 @@ import useAuth from "../Hooks/useAuth";
 import { FaTrash } from "react-icons/fa";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../Hooks/useAxiosSecure";
+import { Helmet } from "react-helmet";
 
 
 const BookedServices = () => {
@@ -55,6 +56,9 @@ const BookedServices = () => {
 
     return (
         <div className="p-6  min-h-[600px]">
+            <Helmet>
+                <title>Booked Service || ElectroSavvy</title>
+            </Helmet>
             <div className="max-w-6xl mx-auto">
                 <h1 className="text-3xl font-bold text-center mb-6">Booked Services</h1>
                 {

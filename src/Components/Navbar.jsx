@@ -59,10 +59,10 @@ const Navbar = () => {
                         user ? 
                         <>
                             <img className="h-10 w-10 rounded-full object-cover mx-3" src={user?.photoURL} alt="" />
-                            <button onClick={handleLogOut} className="btn btn-outline">Sign out</button>
+                            <button onClick={handleLogOut} className="btn bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 text-white font-bold">Sign out</button>
                         </> 
                         :
-                        <Link to='/signin' className="btn ml-3">Sign in</Link>
+                        <Link to='/signin' className="btn bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 text-white font-bold ml-3">Sign in</Link>
                 }
             </div>
         </div>

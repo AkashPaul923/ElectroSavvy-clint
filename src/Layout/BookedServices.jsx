@@ -1,4 +1,3 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
 import useAuth from "../Hooks/useAuth";
 import { FaTrash } from "react-icons/fa";
@@ -53,16 +52,14 @@ const BookedServices = () => {
         });
     }
     
-    
-    if(loading){
-        return <div className="flex justify-center my-[300px]"><span className="loading loading-bars loading-lg"></span></div>
-    }
 
     return (
         <div className="p-6  min-h-[600px]">
             <div className="max-w-6xl mx-auto">
                 <h1 className="text-3xl font-bold text-center mb-6">Booked Services</h1>
                 {
+                loading ? <div className="flex justify-center my-[300px]"><span className="loading loading-bars loading-lg"></span></div>
+                :
                 bookedServices.length === 0 ?
                 <div className="flex justify-center my-[100px] text-2xl font-bold">You have not booked any services yet.</div>
                 :

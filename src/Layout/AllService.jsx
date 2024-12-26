@@ -12,7 +12,7 @@ const AllService = () => {
     useEffect(()=>{
         setServices([])
         setLoading(true)
-        axios.get(`http://localhost:5000/services?search=${search}`)
+        axios.get(`https://electro-savvy-server-side.vercel.app/services?search=${search}`)
         .then(res =>{
             setServices(res.data)
             setLoading(false)

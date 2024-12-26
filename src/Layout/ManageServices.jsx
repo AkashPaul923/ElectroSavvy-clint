@@ -24,10 +24,7 @@ const ManageServices = () => {
             setLoading(false)
         })
     },[])
-    
-    if(loading){
-        return <div className="flex justify-center my-[300px]"><span className="loading loading-bars loading-lg"></span></div>
-    }
+
 
 
     return (
@@ -35,6 +32,8 @@ const ManageServices = () => {
             <div className="max-w-7xl mx-auto">
                 <h1 className="text-3xl font-bold text-center mb-6">Manage Services</h1>
                 {
+                loading ? <div className="flex justify-center my-[300px]"><span className="loading loading-bars loading-lg"></span></div>
+                :
                 services.length === 0 ?
                 <div className="flex justify-center my-[100px] text-2xl font-bold">You have not add any services yet.</div>
                 :

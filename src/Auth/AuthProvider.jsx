@@ -56,14 +56,14 @@ const AuthProvider = ({children}) => {
             }
             if(currentUser?.email){
                 const userToken = {email : currentUser.email}
-                axios.post('http://localhost:5000/jwt', userToken, {withCredentials : true})
+                axios.post('https://electro-savvy-server-side.vercel.app/jwt', userToken, {withCredentials : true})
                 .then(res => {
                     console.log(res.data)
                     setLoader(false)
                 })
             }
             else{
-                axios.post('http://localhost:5000/logout', {}, {withCredentials: true})
+                axios.post('https://electro-savvy-server-side.vercel.app/logout', {}, {withCredentials: true})
                 .then( res => {
                     console.log('logout',res.data)
                     setLoader(false)

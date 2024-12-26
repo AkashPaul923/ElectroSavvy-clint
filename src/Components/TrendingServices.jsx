@@ -58,8 +58,8 @@ const TrendingServices = () => {
                 </Swiper>
             </div>
             }
-            <div className="max-w-[100px] mx-auto my-6">
-            <Link to='/all-service' className="text-center underline ">See all service</Link>
+            <div className="max-w-[150px] mx-auto my-6">
+            <Link to='/all-service' className="text-center hover:text-blue-500 underline ">See all service</Link>
             </div>
         </div>
     );

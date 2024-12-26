@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const ServiceCard = ({service}) => {
     const {_id,serviceImage, serviceName, servicePrice , serviceProviderImage , serviceProviderName, ServiceArea , description} = service
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-5 p-4  shadow-xl rounded-lg border">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-5 p-4 bg-base-200 hover:bg-base-300 rounded-lg border">
         <div>
             <img src={serviceImage} alt={serviceName} className="w-full h-full object-cover rounded-lg"/>
         </div>

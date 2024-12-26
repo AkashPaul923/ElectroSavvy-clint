@@ -27,7 +27,7 @@ const AllService = () => {
 
 
     return (
-        <div className="min-h-[700px]">
+        <div className="min-h-[700px] ">
             <Helmet>
                 <title>All Service || ElectroSavvy</title>
             </Helmet>
@@ -45,7 +45,7 @@ const AllService = () => {
                 !loading & services.length === 0 ?
                 <div className="flex justify-center my-[300px] text-3xl font-bold">NO DATA FOUND</div>
                 :
-                <div className="max-w-5xl mx-auto grid grid-cols-1 gap-7 px-6 lg:p-0">
+                <div className="max-w-5xl mx-auto mb-20 grid grid-cols-1 gap-7 px-6 lg:p-0">
                     {
                         services.map(service => <ServiceCard key={service._id} service={service}></ServiceCard>)
                     }

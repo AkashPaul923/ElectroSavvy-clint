@@ -8,25 +8,24 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 // import required modules
 import { Autoplay, Pagination } from 'swiper/modules';
-import TrendingServiceCard from "./TrendingServiceCard";
-import { Link } from "react-router-dom";
+import CommentCard from "./CommentCard";
 
 
-const TrendingServices = () => {
-    const [ tServices , setTServices ] = useState([])
+const CommentSection = () => {
+    const [ comments , setComments ] = useState([])
     const [loading, setLoading] = useState(true)
 
     useEffect(()=>{
         setLoading(true)
-        axios.get('https://electro-savvy-server-side.vercel.app/trending-services')
+        axios.get('https://electro-savvy-server-side.vercel.app/comments')
         .then(res => {
-            setTServices(res.data)
+            setComments(res.data)
             setLoading(false)
         })
     },[])
     return (
         <div className="py-20">
-            <h1 className="text-3xl font-bold text-center mb-10 mt-4">Trending Services</h1>
+            <h1 className="text-3xl font-bold text-center mb-10 mt-4">What Our Customer Are Saying</h1>
             {
             loading ? <div className="flex justify-center my-[200px]"><span className="loading loading-bars loading-lg"></span></div>
             :
@@ -43,12 +42,16 @@ const TrendingServices = () => {
                     }}
                     loop={ true }
                     breakpoints={{
-                        768: {
+                        600: {
                           slidesPerView: 2,
                           spaceBetween: 30,
                         },
-                        1024: {
+                        900: {
                           slidesPerView: 3,
+                          spaceBetween: 30,
+                        },
+                        1150: {
+                          slidesPerView: 4,
                           spaceBetween: 30,
                         },
                     }}
@@ -56,16 +59,13 @@ const TrendingServices = () => {
                     className="mySwiper"
                 >
                     {
-                        tServices.map(tService => <SwiperSlide key={tService._id}><TrendingServiceCard tService={tService}></TrendingServiceCard></SwiperSlide>)
+                        comments.map(coment => <SwiperSlide key={coment._id}><CommentCard coment={coment}></CommentCard></SwiperSlide>)
                     }
                 </Swiper>
             </div>
             }
-            <div className="max-w-[100px] mx-auto my-6">
-            <Link to='/all-service' className="text-center underline ">See all service</Link>
-            </div>
         </div>
     );
 };
 
-export default TrendingServices;
+export default CommentSection;

@@ -3,7 +3,7 @@ import worker from "../assets/worker.png";
 
 const WhyChooseUs = () => {
   return (
-    <section className=" py-10 px-5 bg-base-300">
+    <section className=" py-20 px-5 bg-base-300">
         <div className="max-w-6xl mx-auto text-center">
             <h2 className="text-2xl font-bold  mb-4">WHY CHOOSE US</h2>
             <p className="text-lg  mb-8">Because we care about your safety..</p>

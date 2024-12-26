@@ -1,4 +1,4 @@
-import React from "react";
+import logo from '../assets/logo.png'
 import {
   FaFacebookF,
   FaTwitter,
@@ -8,11 +8,14 @@ import {
 
 const Footer = () => {
   return (
-    <footer className=" py-10 px-5">
+    <footer className=" py-10 px-5 bg-base-300">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Logo and Contact Info */}
         <div className="md: col-span-2">
-          <h2 className="text-xl font-bold mb-3">ElectroSavvy</h2>
+          <div className="flex r gap-2">
+            <img className="h-7" src={logo} alt="logo" />
+            <h2 className="text-xl font-bold mb-3">ElectroSavvy</h2>
+          </div>
           <p className="mb-2">
             <span className="font-semibold">Phone:</span> +880 9613224433, +880 9638224433
           </p>
@@ -23,11 +26,11 @@ const Footer = () => {
             <span className="font-semibold">Address:</span> House# 1263, Road# 10, Avenue# 02,
             Mirpur DOHS, Dhaka, Bangladesh
           </p>
-          <div className="flex space-x-4">
-            <FaFacebookF />
-            <FaTwitter />
-            <FaWhatsapp />
-            <FaYoutube />
+          <div className="flex space-x-4 text-3xl">
+            <FaFacebookF className='text-blue-600 hover:text-blue-700' />
+            <FaTwitter className='text-blue-400 hover:text-blue-500' />
+            <FaWhatsapp className='text-green-600 hover:text-green-700' />
+            <FaYoutube className='text-red-600 hover:text-red-700' />
           </div>
         </div>
 
@@ -46,10 +49,10 @@ const Footer = () => {
         <div>
           <h3 className="font-bold mb-2">SERVICES</h3>
           <ul className="space-y-2">
-            <li>Body Care</li>
-            <li>Hair Care</li>
-            <li>Packages</li>
-            <li>Makeover</li>
+            <li>Air Conditioner Service</li>
+            <li>Laptop Service</li>
+            <li>Desktop Computer Service</li>
+            <li>Micro Oven Service</li>
           </ul>
         </div>
       </div>

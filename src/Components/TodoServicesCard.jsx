@@ -1,10 +1,11 @@
 import axios from "axios";
 import { useState } from "react";
 import Swal from "sweetalert2";
+import useAxiosSecure from "../Hooks/useAxiosSecure";
 
 
 const TodoServicesCard = ({ toDoService }) => {
-
+    const axiosSecure = useAxiosSecure()
     const {_id, serviceName, currentUserName, currentUserEmail, servicePrice, serviceTakingDate, status, specialInstruction } = toDoService
     const [st, setSt] = useState(status)
 
@@ -21,7 +22,7 @@ const TodoServicesCard = ({ toDoService }) => {
             confirmButtonText: "Yes, update it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                axios.patch(`http://localhost:5000/booked-services/${_id}`, updateStatus)
+                axiosSecure.patch(`/booked-services/${_id}`, updateStatus)
                 .then(res => {
                     if(res.data.modifiedCount > 0 ){
                         setSt(updateStatus.status)

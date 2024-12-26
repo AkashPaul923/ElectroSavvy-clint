@@ -1,20 +1,22 @@
-import axios from "axios";
+
 import { useEffect, useState } from "react";
 import useAuth from "../Hooks/useAuth";
 import TodoServicesCard from "../Components/TodoServicesCard";
+import useAxiosSecure from "../Hooks/useAxiosSecure";
 
 
 const ServiceToDo = () => {
     const [loading, setLoading] = useState(true)
     const [toDoServices, setToDoServices] = useState([])
     const { user } = useAuth()
+    const axiosSecure = useAxiosSecure()
 
 
     useEffect(()=>{
         setLoading(true)
-        axios.get(`http://localhost:5000/to-do-services?email=${user.email}`)
+        axiosSecure.get(`/to-do-services?email=${user.email}`)
         .then(res => {
-            console.log(res.data)
+            // console.log(res.data)
             setToDoServices(res.data)
             setLoading(false)
         })

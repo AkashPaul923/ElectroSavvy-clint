@@ -15,6 +15,8 @@ const Home = () => {
             <TrendingServices></TrendingServices>
             <WhyChooseUs></WhyChooseUs>
             <CommentSection></CommentSection>
+
+            
         </div>
     );
 };

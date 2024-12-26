@@ -34,7 +34,7 @@ const ManageServices = () => {
                 <title>Manage Service || ElectroSavvy</title>
             </Helmet>
             <div className="max-w-7xl mx-auto">
-                <h1 className="text-3xl font-bold text-center mb-6">Manage Services</h1>
+                <h1 className="text-3xl font-bold text-center mb-6"  data-aos="zoom-in" data-aos-duration="1000">Manage Services</h1>
                 {
                 loading ? <div className="flex justify-center my-[300px]"><span className="loading loading-bars loading-lg"></span></div>
                 :

@@ -39,7 +39,7 @@ const TodoServicesCard = ({ toDoService }) => {
 
     return (
         <div>
-            <div className="card bg-base-200 shadow-xl">
+            <div className="card bg-base-200 shadow-xl" >
                 <div className="card-body">
                     <h2 className="card-title">{serviceName}</h2>
                     <p className="font-medium">Service Date: {serviceTakingDate}</p>

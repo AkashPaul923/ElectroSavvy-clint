@@ -2,11 +2,20 @@ import { FcGoogle } from "react-icons/fc";
 import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
 import { Helmet } from "react-helmet";
+import { toast } from "react-toastify";
 
 
 const Register = () => {
     const { handleRegister, manageProfile , handleGoogleSignIn, setUser } = useAuth()
     const navigate = useNavigate()
+
+    // Check for an uppercase letter
+    const hasUppercase = /(?=.*[A-Z])/;
+
+    // Check for a lowercase letter
+    const hasLowercase = /(?=.*[a-z])/;
+
+    
     const handleRegisterSubmit = (e) =>{
         e.preventDefault()
         const form = e.target
@@ -16,6 +25,16 @@ const Register = () => {
         const password = form.password.value
         // console.log({name, photo, email, password})
 
+        if(!hasUppercase.test(password)){
+            return toast.error("Must have an Uppercase letter in the password")
+        }
+        if(!hasLowercase.test(password)){
+            return toast.error("Must have a Lowercase letter in the password ")
+        }
+        if(password.length < 6){
+            return toast.error("Length must be at least 6 character ")
+        }
+
 
         handleRegister( email, password )
         .then((res) =>{
@@ -24,10 +43,10 @@ const Register = () => {
                 setUser({...res.user, displayName: name, photoURL : photo})
                 navigate('/')
             })
-            // toast.success("Successfully register")
+            toast.success("Successfully register")
         })
         .catch(() =>{
-            // toast.error("User already exist")
+            toast.error("User already exist")
         })
     }
 
@@ -36,7 +55,7 @@ const Register = () => {
         handleGoogleSignIn()
         .then(res=>{
             navigate('/')
-            // toast.success("Successfully Login")
+            toast.success("Successfully Sign in")
         })
     }
 
@@ -45,7 +64,7 @@ const Register = () => {
         <Helmet>
             <title>Register || ElectroSavvy</title>
         </Helmet>
-        <div className="w-full max-w-md  rounded-lg shadow-md p-6">
+        <div className="w-full max-w-md  rounded-lg bg-base-200 border p-6"  data-aos="zoom-in" data-aos-duration="1000">
             <h2 className="text-2xl font-bold text-center mb-4">Register an Account</h2>
             <div className="flex justify-center gap-4 mb-4">
                 <button onClick={handleGoogle} className="btn btn-outline flex items-center gap-2 font-bold py-3 px-10 rounded shadow "><FcGoogle size={20} />Sign in With Google

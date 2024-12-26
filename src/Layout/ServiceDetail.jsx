@@ -63,7 +63,7 @@ const ServiceDetail = () => {
                 <title>Service Detail || ElectroSavvy</title>
             </Helmet>
             {/* Service Provider Information */}
-            <div className="p-3 md:p-10 flex gap-2 md:gap-7 items-center bg-base-300 rounded-xl mb-8">
+            <div className="p-3 md:p-10 flex gap-2 md:gap-7 items-center bg-base-300 rounded-xl mb-8"  data-aos="zoom-in" data-aos-duration="1000">
                 <figure>
                     <img
                         src={serviceProviderImage}
@@ -81,7 +81,7 @@ const ServiceDetail = () => {
             </div>
 
             {/* Single Service Section */}
-            <div className="p-3 md:p-10 bg-base-300 rounded-xl">
+            <div className="p-3 md:p-10 bg-base-300 rounded-xl"  data-aos="zoom-in" data-aos-duration="1000">
                 <figure>
                     <img  src={serviceImage} alt={serviceName} className="rounded-xl max-h-[350px] w-full  object-cover"/>
                 </figure>

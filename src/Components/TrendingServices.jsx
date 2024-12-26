@@ -8,8 +8,8 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 // import required modules
 import { Autoplay, Pagination } from 'swiper/modules';
-import TrendingServiceCard from "./TrendingServiceCard";
 import { Link } from "react-router-dom";
+import ServiceCard from "./ServiceCard";
 
 
 const TrendingServices = () => {
@@ -26,7 +26,7 @@ const TrendingServices = () => {
     },[])
     return (
         <div className="py-20">
-            <h1 className="text-3xl font-bold text-center mb-10 mt-4">Trending Services</h1>
+            <h1 className="text-3xl font-bold text-center mb-10 mt-4" data-aos="zoom-in" data-aos-duration="1000">Trending Services</h1>
             {
             loading ? <div className="flex justify-center my-[200px]"><span className="loading loading-bars loading-lg"></span></div>
             :
@@ -43,12 +43,9 @@ const TrendingServices = () => {
                     }}
                     loop={ true }
                     breakpoints={{
-                        768: {
-                          slidesPerView: 2,
-                          spaceBetween: 30,
-                        },
+                        
                         1024: {
-                          slidesPerView: 3,
+                          slidesPerView: 2,
                           spaceBetween: 30,
                         },
                     }}
@@ -56,7 +53,7 @@ const TrendingServices = () => {
                     className="mySwiper"
                 >
                     {
-                        tServices.map(tService => <SwiperSlide key={tService._id}><TrendingServiceCard tService={tService}></TrendingServiceCard></SwiperSlide>)
+                        tServices.map(service => <SwiperSlide key={service._id}><ServiceCard service={service}></ServiceCard></SwiperSlide>)
                     }
                 </Swiper>
             </div>

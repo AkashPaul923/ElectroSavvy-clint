@@ -25,7 +25,7 @@ const CommentSection = () => {
     },[])
     return (
         <div className="py-20">
-            <h1 className="text-3xl font-bold text-center mb-10 mt-4">What Our Customer Are Saying</h1>
+            <h1 className="text-3xl font-bold text-center mb-10 mt-4"  data-aos="zoom-in" data-aos-duration="1000">What Our Customer Are Saying</h1>
             {
             loading ? <div className="flex justify-center my-[200px]"><span className="loading loading-bars loading-lg"></span></div>
             :

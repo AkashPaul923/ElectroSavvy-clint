@@ -54,7 +54,7 @@ const UpdateService = () => {
         <Helmet>
             <title>Update Service || ElectroSavvy</title>
         </Helmet>
-        <div className="w-full max-w-md mx-auto my-20  rounded-lg shadow-md p-6">
+        <div className="w-full max-w-md mx-auto my-20  rounded-lg shadow-md p-6"  data-aos="zoom-in" data-aos-duration="1000">
             <h2 className="text-2xl font-bold text-center mb-4">Update service</h2>
             <form onSubmit={handleUpdateSubmit}>
                 <div className="mb-4">

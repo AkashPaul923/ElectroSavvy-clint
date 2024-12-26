@@ -2,6 +2,7 @@ import { FcGoogle } from "react-icons/fc";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
 import { Helmet } from "react-helmet";
+import { toast } from "react-toastify";
 
 const SignIn = () => {
     const { handleSignIn, handleGoogleSignIn } = useAuth()
@@ -18,12 +19,12 @@ const SignIn = () => {
         // console.log({email, password})
 
         handleSignIn( email, password )
-        .then(res => {
+        .then(() => {
             navigate( location?.state ? location.state : "/")
-            // toast.success("Successfully Login")
+            toast.success("Successfully Sign in")
         })
         .catch(() =>{
-            // toast.error("Email Or Password incorrect")
+            toast.error("Email Or Password incorrect")
         })
     }
 
@@ -32,7 +33,7 @@ const SignIn = () => {
         handleGoogleSignIn()
         .then(res=>{
           navigate( location?.state ? location.state : "/")
-          toast.success("Successfully Login")
+          toast.success("Successfully Sign in")
         })
     }
 
@@ -41,7 +42,7 @@ const SignIn = () => {
         <Helmet>
             <title>Sign in || ElectroSavvy</title>
         </Helmet>
-        <div className="w-full max-w-md  rounded-lg shadow-md p-6">
+        <div className="w-full max-w-md  rounded-lg bg-base-200 border p-6" data-aos="zoom-in" data-aos-duration="1000">
             <h2 className="text-2xl font-bold text-center mb-4">Sign in to your Account</h2>
             <p className="text-sm  text-center mb-6">Welcome back! Select method to log in:</p>
             <div className="flex justify-center gap-4 mb-4">

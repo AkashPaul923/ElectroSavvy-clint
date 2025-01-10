@@ -4,6 +4,7 @@ import Banner from '../Components/Banner';
 import WhyChooseUs from '../Components/WhyChooseUs';
 import TrendingServices from '../Components/TrendingServices';
 import CommentSection from '../Components/CommentSection';
+import PartnerSection from '../Components/PartnerSection';
 
 const Home = () => {
     return (        
@@ -14,6 +15,7 @@ const Home = () => {
             <Banner></Banner>
             <TrendingServices></TrendingServices>
             <WhyChooseUs></WhyChooseUs>
+            <PartnerSection></PartnerSection>
             <CommentSection></CommentSection>
 
             

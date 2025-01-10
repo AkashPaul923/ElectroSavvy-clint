@@ -8,6 +8,7 @@ const Root = () => {
     return (
         <div>
             <Navbar></Navbar>
+            <div className='h-[68px]'></div>
             <Outlet></Outlet>
             <Footer></Footer>
             <ToastContainer />

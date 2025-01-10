@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import logo from '../assets/logo.png'
 import {
   FaFacebookF,
@@ -38,10 +39,7 @@ const Footer = () => {
         <div>
           <h3 className="font-bold mb-2">DISCOVER</h3>
           <ul className="space-y-2">
-            <li>About</li>
-            <li>Blog</li>
-            <li>Offers</li>
-            <li>FAQs</li>
+            <li><Link to='/booked-services'>Booked Services</Link></li>
           </ul>
         </div>
 
@@ -49,10 +47,9 @@ const Footer = () => {
         <div>
           <h3 className="font-bold mb-2">SERVICES</h3>
           <ul className="space-y-2">
-            <li>Air Conditioner Service</li>
-            <li>Laptop Service</li>
-            <li>Desktop Computer Service</li>
-            <li>Micro Oven Service</li>
+            <li><Link to='/add-service'>Add Service</Link></li>
+            <li><Link to='/manage-services'>Manage Services</Link></li>
+            <li><Link to='/service-to-do'>Service To Do</Link></li>
           </ul>
         </div>
       </div>

@@ -64,3 +64,29 @@ Check out the live version of ElectroSavvy here: [https://electrosavvy-57a30.web
 - "sort-by": "^1.2.0",
 - "sweetalert2": "^11.15.3",
 - "swiper": "^11.1.15"
+
+
+## Prerequisites  
+Before you begin, ensure you have the following installed:  
+- **Node.js** (v14 or higher) – [Download Node.js](https://nodejs.org)  
+- **Git** – [Download Git](https://git-scm.com/)  
+- **A package manager:** npm  
+
+## 🔧 Installation Steps  
+
+1. **Clone the repository**  
+   Open your terminal and run the following command:  
+   ```bash
+   git clone https://github.com/AkashPaul923/ElectroSavvy-clint.git
+
+2. **Navigate to the project directory**
+    ```bash
+    cd ElectroSavvy-clint
+
+3. **Install dependencies**
+    ```bash
+    npm install
+
+4. **Start the development server**
+    ```bash
+    npm run dev

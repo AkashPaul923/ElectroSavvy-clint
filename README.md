@@ -48,3 +48,19 @@ Check out the live version of ElectroSavvy here: [https://electrosavvy-57a30.web
 - "tailwindcss": "^3.4.17",
 - "vite": "^6.0.3"
 
+
+## Dependencies
+- "aos": "^3.0.0-beta.6",
+- "axios": "^1.7.9",
+- "firebase": "^11.1.0",
+- "localforage": "^1.10.0",
+- "match-sorter": "^8.0.0",
+- "react": "^18.3.1",
+- "react-dom": "^18.3.1",
+- "react-helmet": "^6.1.0",
+- "react-icons": "^5.4.0",
+- "react-router-dom": "^7.1.0",
+- "react-toastify": "^11.0.2",
+- "sort-by": "^1.2.0",
+- "sweetalert2": "^11.15.3",
+- "swiper": "^11.1.15"

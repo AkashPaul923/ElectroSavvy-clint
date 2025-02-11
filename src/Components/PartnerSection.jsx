@@ -38,12 +38,12 @@ const PartnerSection = () => {
   return (
     <div className="py-20 px-5">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-8">Our Partners</h2>
+        <h2 className="text-3xl font-bold text-center mb-8"  data-aos="zoom-in" data-aos-duration="1000" >Our Partners</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
           {partnersData.map((partner) => (
             <div
               key={partner.id}
-              className="card  shadow-xl p-4 flex items-center justify-center"
+              className="card  shadow-xl p-4 flex items-center justify-center"  data-aos="zoom-in" data-aos-duration="1000" 
             >
               <img
                 src={partner.logo}

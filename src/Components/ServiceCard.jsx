@@ -17,7 +17,7 @@ const ServiceCard = ({service}) => {
                 <img src={serviceProviderImage} alt={serviceProviderName} className="w-10 h-10 object-cover rounded-full border-2"/>
                 <p className="font-medium ">{serviceProviderName}</p>
             </div>
-            <Link to={`/services/${_id}`} className="w-full py-2 bg-blue-500 text-white text-sm  hover:bg-blue-600  btn btn-md">View Details</Link>
+            <Link to={`/services/${_id}`} className="w-full py-2 btn-primary  btn btn-md">View Details</Link>
         </div>
     </div>
   );

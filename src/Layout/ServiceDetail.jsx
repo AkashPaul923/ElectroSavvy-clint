@@ -58,7 +58,7 @@ const ServiceDetail = () => {
     }
 
     return (
-        <div className="max-w-5xl mx-auto p-4 my-10">
+        <div className="max-w-screen-2xl mx-auto p-4 my-10">
             <Helmet>
                 <title>Service Detail || ElectroSavvy</title>
             </Helmet>

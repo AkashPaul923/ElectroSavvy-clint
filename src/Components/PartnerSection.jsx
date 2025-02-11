@@ -43,7 +43,7 @@ const PartnerSection = () => {
           {partnersData.map((partner) => (
             <div
               key={partner.id}
-              className="card  shadow-xl p-4 flex items-center justify-center"  data-aos="zoom-in" data-aos-duration="1000" 
+              className="card border  shadow-xl p-4 flex items-center justify-center"  data-aos="zoom-in" data-aos-duration="1000" 
             >
               <img
                 src={partner.logo}

@@ -59,7 +59,7 @@ const BookedServices = () => {
             <Helmet>
                 <title>Booked Service || ElectroSavvy</title>
             </Helmet>
-            <div className="max-w-6xl mx-auto">
+            <div className="max-w-screen-2xl mx-auto">
                 <h1 className="text-3xl font-bold text-center mb-6"  data-aos="zoom-in" data-aos-duration="1000">Booked Services</h1>
                 {
                 loading ? <div className="flex justify-center my-[300px]"><span className="loading loading-bars loading-lg"></span></div>

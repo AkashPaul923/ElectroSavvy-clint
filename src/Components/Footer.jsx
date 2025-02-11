@@ -44,7 +44,7 @@ const Footer = () => {
         </div>
 
         {/* Services Section */}
-        <div>
+        <div className='text-right'>
           <h3 className="font-bold mb-2">SERVICES</h3>
           <ul className="space-y-2">
             <li><Link to='/add-service'>Add Service</Link></li>

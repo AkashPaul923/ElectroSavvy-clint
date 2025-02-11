@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import 'swiper/css/effect-fade';
 
 // import image;
 import banner1 from '../assets/banner1.jpg'
@@ -13,7 +14,7 @@ import banner2 from '../assets/banner2.jpg'
 import banner3 from '../assets/banner3.jpg'
 
 // import required modules
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { EffectFade, Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 const Banner = () => {
     return (
@@ -21,6 +22,7 @@ const Banner = () => {
             <Swiper
                 spaceBetween={30}
                 centeredSlides={true}
+                effect={'fade'}
                 autoplay={{
                     delay: 5000,
                     disableOnInteraction: false,
@@ -30,7 +32,7 @@ const Banner = () => {
                 //     clickable: true,
                 // }}
                 // navigation={true}
-                modules={[Autoplay, Pagination, Navigation]}
+                modules={[EffectFade,Autoplay, Pagination, Navigation]}
                 className="mySwiper"
             >
                 <SwiperSlide><img className='w-full' src={banner1} alt="" /></SwiperSlide>

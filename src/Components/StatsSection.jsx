@@ -21,7 +21,7 @@ const StatsSection = () => {
 
   return (
     <div className="bg-base-200 py-20 px-5">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-screen-2xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 text-center">
           {stats.map((stat) => (
             <div key={stat.id} className="px-6 bg-base-100 py-10 rounded-lg"  data-aos="zoom-in" data-aos-duration="1000" >

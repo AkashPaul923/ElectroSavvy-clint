@@ -10,7 +10,7 @@ import {
 const Footer = () => {
   return (
     <footer className=" py-10 px-5 bg-base-300">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Logo and Contact Info */}
         <div className="md: col-span-2">
           <div className="flex r gap-2">

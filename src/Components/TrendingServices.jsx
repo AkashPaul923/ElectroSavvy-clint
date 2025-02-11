@@ -30,7 +30,7 @@ const TrendingServices = () => {
             {
             loading ? <div className="flex justify-center my-[200px]"><span className="loading loading-bars loading-lg"></span></div>
             :
-            <div className="max-w-screen-xl mx-auto px-6 lg:p-1">
+            <div className="max-w-screen-2xl mx-auto px-6 lg:p-1">
                 <Swiper
                     slidesPerView={1}
                     spaceBetween={30}

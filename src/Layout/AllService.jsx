@@ -29,7 +29,12 @@ const AllService = () => {
         setLoading(false)
     }
     
-    
+    const handleDescendingService = () => {
+        setLoading(true)
+        const descendingService = [...services].sort((a,b) => b.servicePrice - a.servicePrice)
+        setServices(descendingService)
+        setLoading(false)
+    }
 
     const handleSearch = (e) =>{
         setSearch(e.target.value)
@@ -50,7 +55,7 @@ const AllService = () => {
                 </label>
                 <div>
                     <button onClick={handleAscendingService} className="btn btn-primary">Price: Low-High</button>
-                    
+                    <button onClick={handleDescendingService} className="btn btn-primary ml-3">Price: High-Low</button>
                 </div>
             
             </div>
